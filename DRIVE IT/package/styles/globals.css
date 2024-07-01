@@ -1,0 +1,9 @@
+/* styles/globals.css */
+.vertical-line {
+    border-left: 1px solid #ccc;
+    height: 100%;
+  }
+
+  .car1{
+    width: 40rem;
+  }
