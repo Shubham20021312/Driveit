@@ -80,12 +80,12 @@ export default function Register() {
 
   return (
     <Container className="d-flex justify-content-center align-items-center min-vh-100">
-      <div className="w-75 p-4 rounded shadow-lg mt-3 mb-3" >
-        <h5 className="mb-4">Company Detail Form</h5>
+      <div className="w-75 p-4 rounded mt-3 mb-3" >
+        <h5 className="mb-4" style={{color:'#202126',fontWeight:'700',fontSize:'20px',lineHeight:'32px'}}>Company Detail Form</h5>
         <Form onSubmit={handleSubmit}>
           <Row className="mb-3">
             <Col md={6}>
-              <Form.Group controlId="companyName">
+              <Form.Group controlId="companyName" className='sign-up'>
                 <Form.Label>Company Name</Form.Label>
                 <Form.Control
                   type="text"
@@ -94,13 +94,12 @@ export default function Register() {
                   onChange={handleChange}
                   placeholder="Enter Your Company Name Here"
                   required
-                  style={{ background: '#d3d3d30f' }} 
-
+                  className="no-border"
                 />
               </Form.Group>
             </Col>
             <Col md={6}>
-              <Form.Group controlId="companyContact">
+              <Form.Group controlId="companyContact" className='sign-up'>
                 <Form.Label>Company Contact</Form.Label>
                 <Form.Control
                   type="text"
@@ -109,13 +108,12 @@ export default function Register() {
                   onChange={handleChange}
                   placeholder="Enter Your Company Contact Here"
                   required
-                  style={{ background: '#d3d3d30f' }} 
-
+                  className="no-border"
                 />
               </Form.Group>
             </Col>
           </Row>
-          <Form.Group className="mb-3" controlId="secondaryCompanyContact">
+          <Form.Group className="mb-3 sign-up" controlId="secondaryCompanyContact">
             <Form.Label>Secondary Company Contact</Form.Label>
             <Form.Control
               type="text"
@@ -124,25 +122,22 @@ export default function Register() {
               onChange={handleChange}
               placeholder="Enter Your Secondary Company Contact Here"
               required
-              style={{ background: '#d3d3d30f' }} 
-
+              className="no-border"
             />
           </Form.Group>
-          <Form.Group className="mb-3" controlId="officeAddress">
-            <Form.Label>Office Address</Form.Label>
+          <Form.Group className="mb-3 sign-up" controlId="officeAddress">
+          <Form.Label>Office Address</Form.Label>
             <Form.Control
-              as="textarea"
-              rows={3}
+              type="text"
               name="officeAddress"
               value={formData.officeAddress}
               onChange={handleChange}
               placeholder="Enter Your Office Address Here"
               required
-              style={{ background: '#d3d3d30f' }} 
-
+              className="no-border"
             />
           </Form.Group>
-          <Form.Group className="mb-3" controlId="trafficFileNumber">
+          <Form.Group className="mb-3 sign-up" controlId="trafficFileNumber">
             <Form.Label>Traffic File Number</Form.Label>
             <Form.Control
               type="text"
@@ -151,11 +146,10 @@ export default function Register() {
               onChange={handleChange}
               placeholder="Enter Your Traffic File Number Here"
               required
-              style={{ background: '#d3d3d30f' }} 
-
+              className="no-border"
             />
           </Form.Group>
-          <Form.Group className="mb-3" controlId="tradeLicence">
+          <Form.Group className="mb-3 sign-up" controlId="tradeLicence">
             <Form.Label>Trade/commercial Licence</Form.Label>
             <Form.Control
               type="text"
@@ -164,12 +158,11 @@ export default function Register() {
               onChange={handleChange}
               placeholder="Enter Your Trade Licence Number Here"
               required
-              style={{ background: '#d3d3d30f' }} 
-
+              className="no-border"
             />
           </Form.Group>
-          <div className="text-center mb-3" style={{ border: '1px solid #ccc', borderRadius: '5px', padding: '10px' }}>
-            <p className="mb-1">Note: Upload your Trade license/Commercial Licence</p>
+          <div className="text-center mb-3 " style={{ border: '1px #ccc', borderRadius: '5px', padding: '10px' }}>
+            <p className="mb-1" style={{color:'rgba(32, 33, 38, 1)',fontWeight:'500',fontSize:'12px'}}>Note: Upload your Trade license/Commercial Licence</p>
             <div
               style={{
                 display: 'inline-block',
@@ -191,9 +184,9 @@ export default function Register() {
                 onChange={handleFileChange} 
               />
             </div>
-            <p>
-              <span style={{ color: 'red', fontWeight: 'bold' }}>Click to Upload</span> or drag and drop <br />
-              SVG, PNG, JPG OR GIF (max. 800 X 400px)
+            <p style={{color:'rgba(102, 112, 133, 1)'}}>
+              <span style={{ color: 'rgba(215, 27, 34, 1)', fontWeight: '600',fontSize:'14px' }}>Click to upload</span> or drag and drop <br />
+                SVG, PNG, JPG OR GIF (max. 800 X 400px)
             </p>
             {file && (
               <p>
@@ -201,7 +194,7 @@ export default function Register() {
               </p>
             )}
           </div>
-          <Form.Group className="mb-3" controlId="owner_emirate">
+          <Form.Group className="mb-3 sign-up" controlId="owner_emirate">
             <Form.Label>Owner Emirates ID</Form.Label>
             <Form.Control
               type="text"
@@ -210,14 +203,13 @@ export default function Register() {
               onChange={handleChange}
               placeholder="Enter Your Owner Emirates ID Here"
               required
-              style={{ background: '#d3d3d30f' }} 
-
+              className="no-border"
             />
           </Form.Group>
           <Row className="mb-3">
             <Col md={6}>
-              <div className="text-center" style={{ border: '1px solid #ccc', borderRadius: '5px', padding: '10px' }}>
-                <p className="mb-1">Note: Upload Your Owner Emirated ID</p>
+              <div className="text-center" style={{ border: '1px #ccc', borderRadius: '5px', padding: '10px' }}>
+                <p className="mb-1" style={{color:'rgba(102, 112, 133, 1)',fontSize:'14px',fontWeight:'400'}}>Note: Upload Your Owner Emirated ID</p>
                 <div
                   style={{
                     display: 'inline-block',
@@ -239,8 +231,8 @@ export default function Register() {
                     onChange={handleFileChange1} 
                   />
                 </div>
-                <p>
-                  <span style={{ color: 'red', fontWeight: 'bold' }}>Click to Upload</span> or drag and drop <br />
+                <p style={{color:'rgba(102, 112, 133, 1)'}}>
+                  <span style={{ color: 'rgba(215, 27, 34, 1)', fontWeight: '600',fontSize:'14px' }}>Click to upload</span> or drag and drop <br />
                   SVG, PNG, JPG OR GIF (max. 800 X 400px)
                 </p>
                 {file1 && (
@@ -251,7 +243,7 @@ export default function Register() {
               </div>
             </Col>
             <Col md={6}>
-              <div className="text-center" style={{ border: '1px solid #ccc', borderRadius: '5px', padding: '10px' }}>
+              <div className="text-center" style={{ border: '1px #ccc', borderRadius: '5px', padding: '10px' }}>
                 <p className="mb-1">Upload Your Photo Holding Your Emirates ID</p>
                 <div
                   style={{
@@ -274,8 +266,8 @@ export default function Register() {
                     onChange={handleFileChange2} 
                   />
                 </div>
-                <p>
-                  <span style={{ color: 'red', fontWeight: 'bold' }}>Click to Upload</span> or drag and drop <br />
+                <p style={{color:'rgba(102, 112, 133, 1)',fontSize:'14px',fontWeight:'400'}}>
+                  <span style={{ color: 'rgba(215, 27, 34, 1)', fontWeight: '600',fontSize:'14px'}}>Click to upload</span> or drag and drop <br />
                   SVG, PNG, JPG OR GIF (max. 800 X 400px)
                 </p>
                 {file2 && (
@@ -287,10 +279,10 @@ export default function Register() {
             </Col>
           </Row>
           <div style={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'center' }}>
-            <Button variant="secondary" style={{ width: '120px', height: '40px', marginRight: '10px',color:'red',background:'white'}}>
+            <Button variant="secondary" style={{ width: '120px', height: '48px',color:'rgba(215, 27, 34, 1)',backgroundColor:'white',borderRadius:'12px' }}>
               Back
             </Button>
-            <Button variant="secondary" style={{ width: '120px', height: '40px',color:'white',background:'red' }}>
+            <Button variant="secondary" style={{ width: '120px', height: '48px',color:'white',backgroundColor:'rgba(215, 27, 34, 1)',borderRadius:'12px',marginLeft:'5px' }}>
               Next
             </Button>
           </div>

@@ -1,7 +1,6 @@
 // pages/signin.js
 import { useState } from 'react';
 import { Form, Col, Button } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function SignIn() {
   const [username, setUsername] = useState('');
@@ -24,7 +23,7 @@ export default function SignIn() {
 
   return (
     <div className="d-flex align-items-center justify-content-center vh-100 bg-light">
-      <div className="card p-4">
+      <div className="card p-4 no-border">
         <div className="row g-0">
           <div className="col-md-4">
             <div className="d-flex align-items-center justify-content-center flex-column">
@@ -41,43 +40,45 @@ export default function SignIn() {
           <div className="col-md-7">
             <div className="card-body">
               <h3 className="card-title mb-4">Sign in Form</h3>
-              <p>Don’t have an account? <span className='signup'><a href='#' className='text-danger'>Sign up</a></span></p>
+              <p className='signup'>Don’t have an account? <span className='signup'><a href='#' className='sign1'>Sign up</a></span></p>
               <Form onSubmit={handleSubmit}>
                 <div className="mb-3">
                   <Col md={12}>
-                    <Form.Group controlId="username">
+                    <Form.Group controlId="username" className='sign-up'>
                       <Form.Label>Username</Form.Label>
                       <Form.Control
                         type="text"
                         name="username"
                         value={username}
                         onChange={handleChange}
-                        placeholder="Enter Your Username"
+                        placeholder="Enter Your Username Here"
                         required
-                        style={{ background: '#d3d3d30f' }}
+                        className="no-border"
+                        style={{ backgroundColor: 'rgba(247, 247, 249, 1)' }}
                       />
                     </Form.Group>
                   </Col>
                   <Col md={12}>
-                    <Form.Group controlId="password">
+                    <Form.Group controlId="password" className='sign-up'>
                       <Form.Label>Password</Form.Label>
                       <Form.Control
                         type="password"
                         name="password"
                         value={password}
                         onChange={handleChange}
-                        placeholder="Enter Your password"
+                        placeholder="Enter Your password Here"
                         required
+                        className="no-border"
                         style={{ background: '#d3d3d30f' }}
                       />
                     </Form.Group>
                   </Col>
                 </div>
-                <Button variant="danger" type="submit" className="w-100 rounded-pill">
+                <Button variant="danger" type="submit" className="w-100 sig">
                   Sign In
                 </Button>
-                <Form.Text className="text-danger">
-                  <a href="#" style={{ float: 'right' }} className="text-danger">Forgot password?</a>
+                <Form.Text >
+                  <a href="#" style={{ float: 'right',marginTop:'10px', lineHeight:'20px',color:'rgba(215, 27, 34, 1)',fontWeight:'600',textDecoration:'none' }}>Forgot password?</a>
                 </Form.Text>
               </Form>
             </div>

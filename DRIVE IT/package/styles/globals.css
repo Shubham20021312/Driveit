@@ -7,3 +7,53 @@
   .car1{
     width: 40rem;
   }
+
+.no-border {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.container-custom {
+  background-color: rgba(247, 247, 249, 1);
+}
+
+.sign-up input::placeholder {
+  color: rgba(16, 24, 40, 0.2);
+  font-weight: 400;
+}
+
+.sign-up input{
+  background-color: rgb(244 244 255);;
+  border-radius: 8px;
+  height: '44px';
+}
+
+.sig{
+  border-radius: 12px;
+  padding: 14px, 16px, 14px, 16px;
+  gap: 12px;
+  width: 341px;
+  margin-top: 8px;
+  height: 48px;
+}
+.signup{
+  color: rgba(153, 156, 161, 1);
+}
+.sign1{
+  text-decoration: none;
+  color: rgba(215, 27, 34, 1);
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+}
+label{
+  color: rgba(82, 86, 94, 1);
+  font-weight: 600;
+  line-height:20px;
+  font-size: 14px;
+}
+
+.already{
+  color: rgba(153, 156, 161, 1);
+  margin-top: -18px;
+}

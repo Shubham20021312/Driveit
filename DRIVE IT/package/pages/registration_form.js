@@ -24,12 +24,11 @@ export default function SignIn() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log('Form Data:', formData);
-    // Add your form submission logic here
   };
 
   return (
     <div className="d-flex align-items-center justify-content-center vh-100 bg-light">
-      <div className="card p-4">
+      <div className="card p-4 no-border">
         <div className="row g-0">
           <div className="col-md-4 col-12 d-flex align-items-center justify-content-center">
             <div className="text-center">
@@ -39,16 +38,15 @@ export default function SignIn() {
             </div>
           </div>
           <div className="col-md-1 d-flex align-items-center justify-content-center">
-            <div className="vertical-line"></div>
           </div>
           <div className="col-md-7">
             <div className="card-body">
-              <h3 className="card-title mb-4">Create your Drive it Account</h3>
-              <p>Already have an account? <span className='signup'><a href='#' className='text-danger'>Sign in</a></span></p>
+              <h3 className="card-title mb-4" style={{color:'rgba(32, 33, 38, 1)',lineHeight:'32px',fontSize:'20px',fontWeight:'600'}}>Create your Drive it Account</h3>
+              <p className='already'>Already have an account? <span className='signup'><a href='#' className='sign1'>Sign in</a></span></p>
               <Form onSubmit={handleSubmit}>
                 <Row className="mb-3">
                   <Col md={6}>
-                    <Form.Group controlId="firstName">
+                    <Form.Group controlId="firstName" className='sign-up'>
                       <Form.Label>First name</Form.Label>
                       <Form.Control
                         type="text"
@@ -57,13 +55,12 @@ export default function SignIn() {
                         onChange={handleChange}
                         placeholder="Enter Your First Name"
                         required
-                        style={{ background: '#d3d3d30f' }} 
-
+                        className="no-border"
                       />
                     </Form.Group>
                   </Col>
                   <Col md={6}>
-                    <Form.Group controlId="lastName">
+                    <Form.Group controlId="lastName" className='sign-up'>
                       <Form.Label>Last name</Form.Label>
                       <Form.Control
                         type="text"
@@ -72,13 +69,12 @@ export default function SignIn() {
                         onChange={handleChange}
                         placeholder="Enter Your Last Name"
                         required
-                        style={{ background: '#d3d3d30f' }} 
-
+                        className="no-border"
                       />
                     </Form.Group>
                   </Col>
                 </Row>
-                <Form.Group controlId="email">
+                <Form.Group controlId="email" className='sign-up'>
                   <Form.Label>Email address</Form.Label>
                   <Form.Control
                     type="email"
@@ -87,11 +83,10 @@ export default function SignIn() {
                     onChange={handleChange}
                     placeholder="Enter Your Email"
                     required
-                    style={{ background: '#d3d3d30f' }} 
-
+                    className="no-border"
                   />
                 </Form.Group>
-                <Form.Group controlId="username">
+                <Form.Group controlId="username" className='sign-up'>
                   <Form.Label>Username</Form.Label>
                   <Form.Control
                     type="text"
@@ -100,11 +95,10 @@ export default function SignIn() {
                     onChange={handleChange}
                     placeholder="Enter Your Username"
                     required
-                    style={{ background: '#d3d3d30f' }} 
-
+                    className="no-border"
                   />
                 </Form.Group>
-                <Form.Group controlId="password">
+                <Form.Group controlId="password" className='sign-up'>
                   <Form.Label>Password</Form.Label>
                   <Form.Control
                     type="password"
@@ -113,11 +107,10 @@ export default function SignIn() {
                     onChange={handleChange}
                     placeholder="Enter Your Password"
                     required
-                    style={{ background: '#d3d3d30f' }} 
-
+                    className="no-border"                   
                   />
                 </Form.Group>
-                <Form.Group controlId="confirmPassword" className="mb-3">
+                <Form.Group controlId="confirmPassword" className="mb-3 sign-up">
                   <Form.Label>Confirm Password</Form.Label>
                   <Form.Control
                     type="password"
@@ -126,10 +119,11 @@ export default function SignIn() {
                     onChange={handleChange}
                     placeholder="Confirm Your Password"
                     required
+                    className="no-border"
                     style={{ background: '#d3d3d30f' }} 
                   />
                 </Form.Group>
-                <Button variant="danger" type="submit" className="w-100 rounded-pill">
+                <Button variant="danger" type="submit" className="w-100 sig">
                   Sign Up
                 </Button>
               </Form>
