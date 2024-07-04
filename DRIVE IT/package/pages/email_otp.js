@@ -20,9 +20,9 @@ export default function SignIn() {
   };
 
   return (
-    <div className="d-flex align-items-center justify-content-center vh-100 bg-light">
-      <div className="card p-4 no-border">
-        <div className="row g-0">
+    <div className="d-flex align-items-center justify-content-center vh-100">
+      <div className="card p-4 no-border d-flex flex-column flex-md-row" style={{ width: '100%', maxWidth: '929px', height: '401.5px', color:'rgba(255, 255, 255, 1)'}}>
+      <div className="row g-0">
           <div className="col-md-4">
             <div className="d-flex align-items-center justify-content-center flex-column">
               <img src="car1.png" alt="Sign In" className="img-fluid rounded-start car1" />
@@ -37,7 +37,7 @@ export default function SignIn() {
           <div className="col-md-7">
             <div className="card-body">
               <h3 className="card-title mb-4" style={{color:'#202126',fontWeight:'700',fontSize:'20px'}}>OTP Verification</h3>
-              <p style={{color:'#999CA1',fontWeight:'400',fontSize:'16px'}}>Enter the code from the sms we sent to </p>
+              <p style={{color:'#999CA1',fontWeight:'400',fontSize:'16px'}}>Enter the code from the sms we<br></br>sent to </p>
               <Form onSubmit={handleSubmit}>
                 <Form.Group className="mb-3" controlId="otpForm">
                   <div className="d-flex">
@@ -49,12 +49,12 @@ export default function SignIn() {
                         value={digit}
                         onChange={(e) => handleChange(e, index)}
                         className="otp-input"
-                        style={{ width: '40px', marginRight: '10px' ,background: '#F7F7F9'}}
+                        style={{ width: '40px', marginRight: '15px' ,background: '#F7F7F9'}}
                       />
                     ))}
                   </div>
                 </Form.Group>
-                <p style={{color:'#52565E',fontWeight:'400',fontSize:'14px'}}>Didn’t receive the OTP?<span className='signup'><a href='#' style={{ textDecoration:'none',color:'#D71B22',fontWeight:'600',fontSize:'14px'}}> RESEND</a></span></p>
+                <p style={{color:'rgba(82, 86, 94, 1)',fontWeight:'400',fontSize:'14px',marginleft: '60px'}}>Didn’t receive the OTP?<span className='signup'><a href='#' style={{ textDecoration:'none',color:'#D71B22',fontWeight:'600',fontSize:'14px'}}> RESEND</a></span></p>
                 <Button variant="danger" type="submit" className="w-75 sig">
                  Submit
                 </Button>

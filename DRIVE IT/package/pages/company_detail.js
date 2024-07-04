@@ -79,7 +79,7 @@ export default function Register() {
 
 
   return (
-    <Container className="d-flex justify-content-center align-items-center min-vh-100">
+    <Container className="d-flex justify-content-center align-items-center min-vh-100" style={{backgroundColor:'rgba(255, 255, 255, 1)'}}>
       <div className="w-75 p-4 rounded mt-3 mb-3" >
         <h5 className="mb-4" style={{color:'#202126',fontWeight:'700',fontSize:'20px',lineHeight:'32px'}}>Company Detail Form</h5>
         <Form onSubmit={handleSubmit}>
@@ -95,6 +95,7 @@ export default function Register() {
                   placeholder="Enter Your Company Name Here"
                   required
                   className="no-border"
+                  style={{ backgroundColor: 'rgba(247, 247, 249, 1)',height: '44px',borderRadius:'8px',gap:'16px',padding:'10px, 20px, 10px, 20px'}}
                 />
               </Form.Group>
             </Col>
@@ -109,6 +110,7 @@ export default function Register() {
                   placeholder="Enter Your Company Contact Here"
                   required
                   className="no-border"
+                  style={{ backgroundColor: 'rgba(247, 247, 249, 1)',height: '44px',borderRadius:'8px',gap:'16px',padding:'10px, 20px, 10px, 20px'}}
                 />
               </Form.Group>
             </Col>
@@ -123,6 +125,7 @@ export default function Register() {
               placeholder="Enter Your Secondary Company Contact Here"
               required
               className="no-border"
+              style={{ backgroundColor: 'rgba(247, 247, 249, 1)',height: '44px',borderRadius:'8px',gap:'16px',padding:'10px, 20px, 10px, 20px'}}
             />
           </Form.Group>
           <Form.Group className="mb-3 sign-up" controlId="officeAddress">
@@ -135,6 +138,7 @@ export default function Register() {
               placeholder="Enter Your Office Address Here"
               required
               className="no-border"
+              style={{ backgroundColor: 'rgba(247, 247, 249, 1)',height: '44px',borderRadius:'8px',gap:'16px',padding:'10px, 20px, 10px, 20px'}}
             />
           </Form.Group>
           <Form.Group className="mb-3 sign-up" controlId="trafficFileNumber">
@@ -147,6 +151,7 @@ export default function Register() {
               placeholder="Enter Your Traffic File Number Here"
               required
               className="no-border"
+              style={{ backgroundColor: 'rgba(247, 247, 249, 1)',height: '44px',borderRadius:'8px',gap:'16px',padding:'10px, 20px, 10px, 20px'}}
             />
           </Form.Group>
           <Form.Group className="mb-3 sign-up" controlId="tradeLicence">
@@ -159,9 +164,10 @@ export default function Register() {
               placeholder="Enter Your Trade Licence Number Here"
               required
               className="no-border"
+              style={{ backgroundColor: 'rgba(247, 247, 249, 1)',height: '44px',borderRadius:'8px',gap:'16px',padding:'10px, 20px, 10px, 20px'}}
             />
           </Form.Group>
-          <div className="text-center mb-3 " style={{ border: '1px #ccc', borderRadius: '5px', padding: '10px' }}>
+          <div className="text-center mb-3 " style={{ border: '1px rgba(234, 236, 240, 1)', borderRadius: '8px', padding: '12px, 16px, 12px, 16px' }}>
             <p className="mb-1" style={{color:'rgba(32, 33, 38, 1)',fontWeight:'500',fontSize:'12px'}}>Note: Upload your Trade license/Commercial Licence</p>
             <div
               style={{
@@ -171,7 +177,7 @@ export default function Register() {
                 borderRadius: '50%',
                 padding: '10px',
                 width: 'fit-content',
-                cursor: 'pointer'
+                cursor: 'pointer',
               }}
               onClick={handleUploadClick} 
             >
@@ -184,7 +190,7 @@ export default function Register() {
                 onChange={handleFileChange} 
               />
             </div>
-            <p style={{color:'rgba(102, 112, 133, 1)'}}>
+            <p style={{color:'rgba(102, 112, 133, 1)',fontSize:'14px',fontWeight:'400'}}>
               <span style={{ color: 'rgba(215, 27, 34, 1)', fontWeight: '600',fontSize:'14px' }}>Click to upload</span> or drag and drop <br />
                 SVG, PNG, JPG OR GIF (max. 800 X 400px)
             </p>
@@ -204,13 +210,14 @@ export default function Register() {
               placeholder="Enter Your Owner Emirates ID Here"
               required
               className="no-border"
+              style={{ backgroundColor: 'rgba(247, 247, 249, 1)',height: '44px',borderRadius:'8px',gap:'16px',padding:'10px, 20px, 10px, 20px'}}
             />
           </Form.Group>
           <Row className="mb-3">
             <Col md={6}>
               <div className="text-center" style={{ border: '1px #ccc', borderRadius: '5px', padding: '10px' }}>
-                <p className="mb-1" style={{color:'rgba(102, 112, 133, 1)',fontSize:'14px',fontWeight:'400'}}>Note: Upload Your Owner Emirated ID</p>
-                <div
+              <p className="mb-1" style={{color:'rgba(32, 33, 38, 1)',fontSize:'12px',fontWeight:'500',lineHeight:'20px'}}>Note: Upload your Owner Emirates ID</p>
+              <div
                   style={{
                     display: 'inline-block',
                     position: 'relative',
@@ -231,7 +238,7 @@ export default function Register() {
                     onChange={handleFileChange1} 
                   />
                 </div>
-                <p style={{color:'rgba(102, 112, 133, 1)'}}>
+                <p style={{color:'rgba(102, 112, 133, 1)',fontSize:'14px',fontWeight:'400'}}>
                   <span style={{ color: 'rgba(215, 27, 34, 1)', fontWeight: '600',fontSize:'14px' }}>Click to upload</span> or drag and drop <br />
                   SVG, PNG, JPG OR GIF (max. 800 X 400px)
                 </p>
@@ -244,7 +251,7 @@ export default function Register() {
             </Col>
             <Col md={6}>
               <div className="text-center" style={{ border: '1px #ccc', borderRadius: '5px', padding: '10px' }}>
-                <p className="mb-1">Upload Your Photo Holding Your Emirates ID</p>
+                <p className="mb-1" style={{color:'rgba(32, 33, 38, 1)',fontSize:'12px',fontWeight:'500',lineHeight:'20px'}}>Upload Your Photo Holding Your Emirates ID</p>
                 <div
                   style={{
                     display: 'inline-block',
@@ -279,10 +286,10 @@ export default function Register() {
             </Col>
           </Row>
           <div style={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'center' }}>
-            <Button variant="secondary" style={{ width: '120px', height: '48px',color:'rgba(215, 27, 34, 1)',backgroundColor:'white',borderRadius:'12px' }}>
+            <Button variant="secondary" style={{ width: '120px', height: '48px',color:'rgba(215, 27, 34, 1)',backgroundColor:'rgba(226, 226, 227, 1)',borderRadius:'12px', border:'1px rgba(226, 226, 227, 1)',fontWeight:'500',fontSize:'16px',lineHeight:'19.2px',}}>
               Back
             </Button>
-            <Button variant="secondary" style={{ width: '120px', height: '48px',color:'white',backgroundColor:'rgba(215, 27, 34, 1)',borderRadius:'12px',marginLeft:'5px' }}>
+            <Button variant="secondary" style={{ width: '120px', height: '48px',color:'rgba(255, 255, 255, 1)',backgroundColor:'rgba(215, 27, 34, 1)',borderRadius:'12px',marginLeft:'24px',fontWeight:'500',fontSize:'16px',lineHeight:'19.2px',border:'none'}}>
               Next
             </Button>
           </div>
