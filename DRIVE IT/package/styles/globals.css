@@ -11,6 +11,11 @@
 .no-border {
   border: none !important;
   box-shadow: none !important;
+  background-color: rgba(247, 247, 249, 1);
+}
+
+.no-border::placeholder {
+  color: rgba(16, 24, 40, 0.2); 
 }
 
 .container-custom {
@@ -23,7 +28,7 @@
 }
 
 .sign-up input{
-  background-color: rgb(244 244 255);;
+  background-color: rgba(247, 247, 249, 1);
   border-radius: 8px;
   height: '44px';
 }
@@ -57,6 +62,102 @@ label{
 .already{
   color: rgba(153, 156, 161, 1);
   margin-top: -18px;
+}
+
+
+.container2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh; 
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px; 
+  margin: 0 auto; 
+}
+
+.selectedCategories {
+  margin-top: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.selectedCategory {
+  background-color: rgba(255, 233, 233, 1);
+  color: rgba(215, 27, 34, 1);
+  font-weight: 600;
+  font-size: 16px;
+  padding: 10px 15px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.selectedCategory span {
+  cursor: pointer;
+}
+
+.categories {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.category {
+  color: rgba(102, 112, 133, 1);
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  border: 1px solid rgba(208, 213, 221, 1);
+}
+
+.category.active {
+  background-color: #d0eaff;
+  color: #007bff;
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-end; 
+  gap: 12px;
+}
+
+.backButton, .nextButton {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.backButton {
+  width: 120px;
+  height: 48px;
+  color:rgba(215, 27, 34, 1);
+  background-color:rgba(226, 226, 227, 1);
+  border-radius:12px;
+  border:1px rgba(226, 226, 227, 1);
+  font-weight:500;
+  font-size:16px;
+  line-height:19.2px;
+}
+
+.nextButton {
+  width: 120px; 
+  height: 48px;
+  color:rgba(255, 255, 255, 1);
+  background-color:rgba(215, 27, 34, 1);
+  border-radius:12px;
+  margin-left:24px;
+  font-weight:500;
+  font-size:16px;
+  line-height:19.2px;
+  border:none
 }
 
 
