@@ -286,8 +286,8 @@ export default function Register() {
             </Col>
           </Row>
           <div style={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'center' }}>
-            <Button variant="secondary" style={{ width: '120px', height: '48px',color:'rgba(215, 27, 34, 1)',backgroundColor:'rgba(226, 226, 227, 1)',borderRadius:'12px', border:'1px rgba(226, 226, 227, 1)',fontWeight:'500',fontSize:'16px',lineHeight:'19.2px',}}>
-              Back
+            <Button variant="secondary" style={{ width: '120px', height: '48px',color:'rgba(215, 27, 34, 1)',backgroundColor:'rgba(255, 255, 255, 1)',border:'1px solid rgba(226, 226, 227, 1)',borderRadius:'12px',fontWeight:'500',fontSize:'16px',lineHeight:'19.2px',}}>
+            Back
             </Button>
             <Button variant="secondary" style={{ width: '120px', height: '48px',color:'rgba(255, 255, 255, 1)',backgroundColor:'rgba(215, 27, 34, 1)',borderRadius:'12px',marginLeft:'24px',fontWeight:'500',fontSize:'16px',lineHeight:'19.2px',border:'none'}}>
               Next

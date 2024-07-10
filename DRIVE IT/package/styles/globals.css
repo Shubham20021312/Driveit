@@ -57,6 +57,7 @@ label{
   font-weight: 600;
   line-height:20px;
   font-size: 14px;
+   font-family: 'Lato'  
 }
 
 .already{
@@ -161,3 +162,16 @@ label{
 }
 
 
+.with-icon {
+  position: relative;
+}
+
+.with-icon .material-icons.icon-circle {
+  font-size: 20px;
+  color:  rgba(71, 84, 103, 1);
+  background-color: rgba(242, 244, 247, 1);
+  border-radius: 50%;
+  padding: 4px;
+  margin-right: 8px;
+  vertical-align: middle;
+}

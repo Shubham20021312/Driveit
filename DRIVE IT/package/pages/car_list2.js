@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import { Form, Row, Col } from 'react-bootstrap';
+import { Form, Row, Button, Col } from 'react-bootstrap';
+import { AiOutlineCloudUpload } from 'react-icons/ai'; 
+
 
 const HorizontalDivs = () => {
   const [formData, setFormData] = useState({
@@ -15,6 +17,16 @@ const HorizontalDivs = () => {
     kmPerWeek:'',
     RentPerMonth:'',
     kmPerMonth:'',
+    EngineCapacity:'',
+    transmission:'',
+    cylinder:'',
+    seat:'',
+    Fueltype:'',
+    chauffeurHours:'',
+    year:'',
+    city:'',
+    mulkiya:'',
+
   });
 
   const handleChange = (e) => {
@@ -28,6 +40,17 @@ const HorizontalDivs = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(formData); 
+  };
+
+  const handleUploadClick = () => {
+    document.getElementById('fileInput').click();
+  };
+  const [file, setFile] = useState(null);
+  const handleFileChange = (e) => {
+    const selectedFile = e.target.files[0];
+    if (selectedFile) {
+      setFile(selectedFile);
+    }
   };
 
   return (
@@ -77,7 +100,7 @@ const HorizontalDivs = () => {
                     className="no-border"
                     style={{ backgroundColor: 'rgba(247, 247, 249, 1)', height: '44px', borderRadius: '8px', padding: '10px' }}
                   >
-                    <option value="">Select Category</option>
+                    <option value="" style={{color:'red'}}>Select Category</option>
                     <option value="Category 1">Category 1</option>
                     <option value="Category 2">Category 2</option>
                     <option value="Category 3">Category 3</option>
@@ -237,8 +260,8 @@ const HorizontalDivs = () => {
           <Form onSubmit={handleSubmit}>
             <Row className="mb-3">
               <Col md={4}>
-                <Form.Group controlId="EngineCapacity" className='sign-up'>
-                  <Form.Label>Engine Capacity</Form.Label>
+                <Form.Group controlId="EngineCapacity" className='sign-up with-icon'>
+                  <Form.Label><span className="material-icons icon-circle">engineering</span>Engine Capacity</Form.Label>
                   <Form.Control
                     type="text"
                     name="EngineCapacity"
@@ -252,8 +275,8 @@ const HorizontalDivs = () => {
                 </Form.Group>
               </Col>
               <Col md={4}>
-              <Form.Group controlId="transmission" className='sign-up'>
-                  <Form.Label>Transmission</Form.Label>
+              <Form.Group controlId="transmission" className='sign-up with-icon'>
+                  <Form.Label> <span className="material-icons icon-circle">settings_ethernet</span>Transmission</Form.Label>
                   <Form.Control
                     type="text"
                     name="transmission"
@@ -267,8 +290,8 @@ const HorizontalDivs = () => {
                 </Form.Group>
               </Col>
               <Col md={4}>
-              <Form.Group controlId="kilometre" className='sign-up'>
-                  <Form.Label>Kilometre</Form.Label>
+              <Form.Group controlId="kilometre" className='sign-up with-icon'>
+                  <Form.Label> <span className="material-icons icon-circle">speed</span>Kilometre</Form.Label>
                   <Form.Control
                     type="text"
                     name="kilometre"
@@ -285,8 +308,11 @@ const HorizontalDivs = () => {
 
             <Row className="mb-3">
               <Col md={4}>
-                <Form.Group controlId="cylinder" className='sign-up'>
-                  <Form.Label>Cylinder</Form.Label>
+                <Form.Group controlId="cylinder" className='sign-up with-icon'>
+                  <Form.Label>
+                    <span className="material-icons icon-circle">power</span>
+                      Cylinder
+                  </Form.Label>
                   <Form.Control
                     type="text"
                     name="cylinder"
@@ -300,8 +326,11 @@ const HorizontalDivs = () => {
                 </Form.Group>
               </Col>
               <Col md={4}>
-              <Form.Group controlId="seat" className='sign-up'>
-                  <Form.Label>Seat</Form.Label>
+              <Form.Group controlId="seat" className='sign-up with-icon'>
+                  <Form.Label>
+                    <span className="material-icons icon-circle">event_seat</span>
+                    Seat
+                  </Form.Label>
                   <Form.Control
                     type="text"
                     name="seat"
@@ -315,8 +344,8 @@ const HorizontalDivs = () => {
                 </Form.Group>
               </Col>
               <Col md={4}>
-              <Form.Group controlId="Fueltype" className='sign-up'>
-                  <Form.Label>Fuel Type</Form.Label>
+              <Form.Group controlId="Fueltype" className='sign-up with-icon'>
+                  <Form.Label> <span className="material-icons icon-circle">local_gas_station</span>Fuel Type</Form.Label>
                   <Form.Control
                     type="text"
                     name="Fueltype"
@@ -330,6 +359,127 @@ const HorizontalDivs = () => {
                 </Form.Group>
               </Col>
             </Row>
+
+            <Row className="mb-3">
+              <Col md={4}>
+                <Form.Group controlId="chauffeurHours" className='sign-up with-icon'>
+                  <Form.Label>
+                    <span className="material-icons icon-circle">access_time</span>
+                    Chauffeur hours
+                  </Form.Label>
+                  <Form.Control
+                    type="text"
+                    name="chauffeurHours"
+                    value={formData.chauffeurHours}
+                    onChange={handleChange}
+                    placeholder="Enter Your Chauffeur Hours Here"
+                    required
+                    className="no-border"
+                    style={{ backgroundColor: 'rgba(247, 247, 249, 1)', height: '44px', borderRadius: '8px', padding: '10px' }}
+                  />
+                </Form.Group>
+              </Col>
+              <Col md={4}>
+              <Form.Group controlId="year" className='sign-up with-icon'>
+                <Form.Label>
+                  <span className="material-icons icon-circle">event</span>
+                  Year
+                </Form.Label>
+                <Form.Control
+                  type="text"
+                  name="year"
+                  value={formData.year}
+                  onChange={handleChange}
+                  placeholder="Enter Your Year Here"
+                  required
+                  className="no-border"
+                  style={{ backgroundColor: 'rgba(247, 247, 249, 1)', height: '44px', borderRadius: '8px', padding: '10px' }}
+                />
+            </Form.Group>
+
+              </Col>
+              <Col md={4}>
+              <Form.Group controlId="selectCity" className='sign-up with-icon'>
+                <Form.Label>
+                  <span className="material-icons icon-circle">location_city</span>
+                  Select City
+                </Form.Label>
+                <Form.Select
+                  name="city"
+                  value={formData.city}
+                  onChange={handleChange}
+                  required
+                  className="no-border"
+                  style={{ backgroundColor: 'rgba(247, 247, 249, 1)', height: '44px', borderRadius: '8px', padding: '10px' }}
+                >
+                  <option value="">Select Your City</option>
+                  <option value="abu-dhabi">Abu Dhabi</option>
+                  <option value="dubai">Dubai</option>
+                  <option value="sharjah">Sharjah</option>
+                  <option value="ajman">Ajman</option>
+                  <option value="fujairah">Fujairah</option>
+                  <option value="ras-al-khaimah">Ras al-Khaimah</option>
+                  <option value="umm-al-qaiwain">Umm al-Qaiwain</option>
+                </Form.Select>
+              </Form.Group>
+              </Col>
+            </Row>
+
+            <hr style={{border:'1px solid rgba(238, 239, 244, 1)'}}></hr>
+            
+            <Form.Group className="mb-3 sign-up" controlId="mulkiya"> 
+            <Form.Label>Mulkiya</Form.Label>
+            <Form.Control
+              type="text"
+              name="mulkiya"
+              value={formData.mulkiya}
+              onChange={handleChange}
+              placeholder="Enter mulkiya"
+              required
+              className="no-border"
+              style={{ backgroundColor: 'rgba(247, 247, 249, 1)', height: '44px', borderRadius: '8px', gap: '16px', padding: '10px 20px' }}
+            />
+          </Form.Group>
+          <div className="text-center mb-3" style={{ border: '1px solid rgba(234, 236, 240, 1)', borderRadius: '8px', padding: '16px', minHeight: '180px' }}>
+          <div
+              style={{
+                display: 'inline-block',
+                position: 'relative',
+                backgroundColor: '#f5f5f5',
+                borderRadius: '50%',
+                padding: '10px',
+                width: 'fit-content',
+                cursor: 'pointer',
+              }}
+              onClick={handleUploadClick} 
+            >
+              <AiOutlineCloudUpload style={{ fontSize: '2rem', color: 'red' }} />
+              <input
+                type="file"
+                id="fileInput"
+                style={{ display: 'none' }}
+                accept=".svg, .png, .jpg, .gif"
+                onChange={handleFileChange} 
+              />
+            </div>
+            <p style={{color:'rgba(102, 112, 133, 1)',fontSize:'14px',fontWeight:'400'}}>
+              <span style={{ color: 'rgba(215, 27, 34, 1)', fontWeight: '600',fontSize:'14px' }}>Uplaod Your Mulkiya</span> or drag and drop <br />
+                SVG, PNG, JPG OR GIF (max. 800 X 400px)
+            </p>
+            {file && (
+              <p>
+                Selected File: {file.name} 
+              </p>
+            )}
+          </div>
+          <div style={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'center' }}>
+            <Button variant="secondary" style={{ width: '120px', height: '48px',color:'rgba(215, 27, 34, 1)',backgroundColor:'rgba(255, 255, 255, 1)',border:'1px solid rgba(226, 226, 227, 1)',borderRadius:'12px',fontWeight:'500',fontSize:'16px',lineHeight:'19.2px',}}>
+              Back
+            </Button>
+            <Button variant="secondary" style={{ width: '120px', height: '48px',color:'rgba(255, 255, 255, 1)',backgroundColor:'rgba(215, 27, 34, 1)',borderRadius:'12px',marginLeft:'24px',fontWeight:'500',fontSize:'16px',lineHeight:'19.2px',border:'none'}}>
+             Submit
+            </Button>
+          </div>
           </Form>
         </div>
       </div>
